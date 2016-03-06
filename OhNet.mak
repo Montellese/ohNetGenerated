@@ -21,7 +21,7 @@ depsPlatform = Windows-$(openhome_architecture)
 !if "$(debug)"=="1"
 link_flag_debug = /debug
 link_flag_debug_dll = $(link_flag_debug)
-debug_specific_cflags = /MTd /Z7 /Od /RTC1
+debug_specific_cflags = /MTd /Z7 /Od /RTC1 -D_HAS_ITERATOR_DEBUGGING=0 -D_ITERATOR_DEBUG_LEVEL=0
 debug_csharp = /define:DEBUG /debug+
 build_dir = Debug
 openhome_configuration = Debug
